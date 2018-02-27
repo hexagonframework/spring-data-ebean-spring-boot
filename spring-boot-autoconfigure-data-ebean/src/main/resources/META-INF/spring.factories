@@ -1,3 +1,4 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.springframework.boot.autoconfigure.data.ebean.EbeanRepositoriesAutoConfiguration
+org.springframework.boot.autoconfigure.data.ebean.EbeanRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.ebean.EbeanAgentAutoConfiguration
