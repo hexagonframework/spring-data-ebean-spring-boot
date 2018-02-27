@@ -1,1 +1,1 @@
-provides: spring-data-jpa
+provides: spring-data-ebean
