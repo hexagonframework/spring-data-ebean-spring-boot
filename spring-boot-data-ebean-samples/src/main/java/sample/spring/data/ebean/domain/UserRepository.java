@@ -34,8 +34,8 @@ public interface UserRepository extends EbeanRepository<User, Long> {
   @Modifying
   int deleteUserByEmailAddress(@Param("emailAddress") String emailAddress);
 
-//    @Query(name = "withManagerById")
-//    List<User> findByLastNameNamedOql(@Param("lastName") String lastName);
+  @Query(name = "withManagerById")
+  List<User> findByLastNameNamedOql(@Param("lastName") String lastName);
 
-  //List<User> findAllByEmailAddressAndFullNameLastName(@Param("emailAddress") String emailAddress, @Param("lastName") String lastName);
+  List<User> findAllByEmailAddressAndFullNameLastName(@Param("emailAddress") String emailAddress, @Param("lastName") String lastName);
 }
