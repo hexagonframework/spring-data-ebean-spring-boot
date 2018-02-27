@@ -33,6 +33,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.ebean.domain.AbstractEntity;
 import org.springframework.data.ebean.domain.AggregateRoot;
 
@@ -47,6 +48,7 @@ import org.springframework.data.ebean.domain.AggregateRoot;
 @Table(name = "user")
 @Getter
 @Setter
+@ToString
 public class User extends AbstractEntity {
 
   @Embedded
