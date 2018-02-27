@@ -35,7 +35,7 @@ import org.springframework.data.ebean.repository.config.EbeanRepositoryConfigExt
 import org.springframework.data.ebean.repository.support.EbeanRepositoryFactoryBean;
 
 /**
- * {@link EnableAutoConfiguration Auto-configuration} for Spring Data's Ebean Repositories.
+ * Auto-configuration for Spring Data's Ebean Repositories.
  * <p>
  * Activates when there is a bean of type {@link javax.sql.DataSource} configured in the
  * context, the Spring Data Ebean
