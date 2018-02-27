@@ -8,7 +8,7 @@
         <version>1.5.10.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <groupId>io.github.hexagonframework.boot</groupId>
     <artifactId>spring-boot-data-ebean-samples</artifactId>
     <dependencies>
         <dependency>
@@ -16,14 +16,9 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.github.hexagonframework</groupId>
+            <groupId>io.github.hexagonframework.boot</groupId>
             <artifactId>spring-boot-starter-data-ebean</artifactId>
             <version>1.0.0.SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.hexagonframework</groupId>
-            <artifactId>spring-boot-autoconfigure-data-ebean</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>

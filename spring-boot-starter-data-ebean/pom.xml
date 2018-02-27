@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>io.github.hexagonframework</groupId>
-        <artifactId>spring-data-ebean-starter</artifactId>
+        <groupId>io.github.hexagonframework.boot</groupId>
+        <artifactId>spring-data-ebean-spring-boot</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <groupId>io.github.hexagonframework</groupId>
+    <groupId>io.github.hexagonframework.boot</groupId>
     <artifactId>spring-boot-starter-data-ebean</artifactId>
     <version>1.0.0.SNAPSHOT</version>
     <description>Starter for using Spring Data Ebean</description>
@@ -17,6 +17,10 @@
         <dependency>
             <groupId>io.github.hexagonframework.data</groupId>
             <artifactId>spring-data-ebean</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.hexagonframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure-data-ebean</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
