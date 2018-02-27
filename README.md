@@ -6,4 +6,3 @@
 
 
 [Example](https://github.com/hexagonframework/spring-boot-data-ebean-samples)
-
