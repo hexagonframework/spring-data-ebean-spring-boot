@@ -6,12 +6,12 @@
     <parent>
         <groupId>io.github.hexagonframework.boot</groupId>
         <artifactId>spring-data-ebean-spring-boot</artifactId>
-        <version>1.1.0.RELEASE</version>
+        <version>1.2.0.RELEASE</version>
     </parent>
     <groupId>io.github.hexagonframework.boot</groupId>
     <artifactId>spring-boot-starter-data-ebean</artifactId>
-    <version>1.1.0.RELEASE</version>
-    <name>spring boot starter for spring data ebean</name>
+    <version>1.2.0.RELEASE</version>
+    <name>spring-boot-starter-data-ebean</name>
     <description>Starter for using Spring Data Ebean</description>
 
     <dependencies>
