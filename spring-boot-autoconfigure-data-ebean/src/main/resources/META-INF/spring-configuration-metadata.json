@@ -1,0 +1,338 @@
+{
+  "hints": [
+    {
+      "name": "ebean.persistenceContextScope",
+      "values": [
+        {
+          "value": "TRANSACTION",
+          "description": "PersistenceContext is scoped to the transaction."
+        },
+        {
+          "value": "QUERY",
+          "description": "PersistenceContext is scoped to the query."
+        }
+      ]
+    },
+    {
+      "name": "ebean.tenant.mode",
+      "values": [
+        {
+          "value": "NONE",
+          "description": "No multi-tenancy."
+        },
+        {
+          "value": "DB",
+          "description": "Each Tenant has their own Database (javax.sql.DataSource)."
+        },
+        {
+          "value": "SCHEMA",
+          "description": "Each Tenant has their own Database schema."
+        },
+        {
+          "value": "CATALOG",
+          "description": "Each Tenant has their own Database but with in connection pool."
+        },
+        {
+          "value": "PARTITION",
+          "description": "Tenants share tables but have a discriminator/partition column that partitions the data."
+        }
+      ]
+    },
+    {
+      "name": "ebean.jsonDateTime",
+      "values": [
+        {
+          "values": "MILLIS",
+          "description": "Format as epoch millis."
+        },
+        {
+          "values": "NANOS",
+          "description": "Format as epoch with nanos."
+        },
+        {
+          "values": "ISO8601",
+          "description": "Format as ISO-8601 date format."
+        }
+      ]
+    },
+    {
+      "name": "ebean.jodaLocalTimeMode",
+      "values": [
+        {
+          "values": "normal"
+        },
+        {
+          "values": "utc"
+        }
+      ]
+    },
+    {
+      "name": "ebean.uuidVersion",
+      "values": [
+        {
+          "values": "VERSION4"
+        },
+        {
+          "values": "VERSION1"
+        },
+        {
+          "values": "VERSION1RND"
+        }
+      ]
+    },
+    {
+      "name": "ebean.persistBatchOnCascade",
+      "values": [
+        {
+          "values": "NONE",
+          "description": "Do not use JDBC Batch mode."
+        },
+        {
+          "values": "INSERT",
+          "description": "se JDBC Batch mode on Inserts."
+        },
+        {
+          "values": "ALL",
+          "description": "Use JDBC Batch mode on Inserts, Updates and Deletes."
+        },
+        {
+          "values": "INHERIT",
+          "description": "It should only used on the Transactional annotation to indicate that the value should inherit from the ServerConfig setting."
+        }
+      ]
+    },
+    {
+      "name": "ebean.persistBatch",
+      "values": [
+        {
+          "values": "NONE",
+          "description": "Do not use JDBC Batch mode."
+        },
+        {
+          "values": "INSERT",
+          "description": "se JDBC Batch mode on Inserts."
+        },
+        {
+          "values": "ALL",
+          "description": "Use JDBC Batch mode on Inserts, Updates and Deletes."
+        },
+        {
+          "values": "INHERIT",
+          "description": "It should only used on the Transactional annotation to indicate that the value should inherit from the ServerConfig setting."
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.data.ebean.repositories.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable ebean repositories.",
+      "defaultValue": true
+    },
+    {
+      "name": "ebean.packages",
+      "type": "java.lang.String",
+      "description": "The packages that are searched for interesting classes. Only used when classes is empty/not explicitly specified.",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.mappingLocations",
+      "type": "java.lang.String",
+      "description": "The locations that are searched for xml mapping files.",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.currentUserProvider",
+      "type": "java.lang.String",
+      "description": "This is used to populate @WhoCreated, @WhoModified and support other audit features (who executed a query etc).",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.ddl.generate",
+      "type": "java.lang.Boolean",
+      "description": "Whether to generate the \"create all\" DDL on startup.",
+      "defaultValue": false
+    },
+    {
+      "name": "ebean.ddl.run",
+      "type": "java.lang.Boolean",
+      "description": "Whether to run ddl.",
+      "defaultValue": false
+    },
+    {
+      "name": "ebean.ddl.createOnly",
+      "type": "java.lang.Boolean",
+      "description": "Set true if the \"drop all ddl\" should be skipped.",
+      "defaultValue": false
+    },
+    {
+      "name": "ebean.ddl.initSql",
+      "type": "java.lang.String",
+      "description": "The SQL script to execute before the \"create all\" DDL has been run.",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.ddl.seedSql",
+      "type": "java.lang.String",
+      "description": "The SQL script to execute after the \"create all\" DDL has been run.",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.skipCacheAfterWrite",
+      "type": "java.lang.Boolean",
+      "description": "When true L2 bean cache use is skipped after a write has occurred on a transaction.",
+      "defaultValue": true
+    },
+    {
+      "name": "ebean.updateAllPropertiesInBatch",
+      "type": "java.lang.Boolean",
+      "description": "Set true if updates in JDBC batch default to include all properties by default.",
+      "defaultValue": true
+    },
+    {
+      "name": "ebean.updateChangesOnly",
+      "type": "java.lang.Boolean",
+      "description": "The behaviour of update to include on the change properties.",
+      "defaultValue": true
+    },
+    {
+      "name": "ebean.defaultDeleteMissingChildren",
+      "type": "java.lang.Boolean",
+      "description": "Default behaviour for updates when cascade save on a O2M or M2M to delete any missing children.",
+      "defaultValue": true
+    },
+    {
+      "name": "ebean.updatesDeleteMissingChildren",
+      "type": "java.lang.Boolean",
+      "description": "The behaviour for updates when cascade save on a O2M or M2M to delete any missing children.",
+      "defaultValue": true
+    },
+    {
+      "name": "ebean.persistBatch",
+      "type": "java.lang.String",
+      "description": "Use for transaction scoped batch mode..",
+      "defaultValue": "NONE"
+    },
+    {
+      "name": "ebean.persistBatchOnCascade",
+      "type": "java.lang.String",
+      "description": "Use for cascade persist JDBC batch mode.",
+      "defaultValue": "INHERIT"
+    },
+    {
+      "name": "ebean.persistBatchSize",
+      "type": "java.lang.Number",
+      "description": "The batch size used for JDBC batching.",
+      "defaultValue": 20
+    },
+    {
+      "name": "ebean.persistenceContextScope",
+      "type": "java.lang.String",
+      "description": "The scope for PersistenceContext.",
+      "defaultValue": "TRANSACTION"
+    },
+    {
+      "name": "ebean.expressionNativeIlike",
+      "type": "java.lang.Boolean",
+      "description": "Set to true to use native ILIKE expression (if support by database platform / like Postgres).",
+      "defaultValue": false
+    },
+    {
+      "name": "ebean.expressionEqualsWithNullAsNoop",
+      "type": "java.lang.Boolean",
+      "description": "Set to true if you want eq(\"someProperty\", null) to generate 1=1 rather than \"is null\" sql expression.",
+      "defaultValue": false
+    },
+    {
+      "name": "ebean.uuidVersion",
+      "type": "java.lang.String",
+      "description": "The UUID version to use.",
+      "defaultValue": "VERSION4"
+    },
+    {
+      "name": "ebean.uuidStateFile",
+      "type": "java.lang.String",
+      "description": "The UUID state file (for Version 1 UUIDs).",
+      "defaultValue": "ebean-uuid.state"
+    },
+    {
+      "name": "ebean.localTimeWithNanos",
+      "type": "java.lang.Boolean",
+      "description": "Set true if LocalTime should be persisted with nanos precision.",
+      "defaultValue": false
+    },
+    {
+      "name": "ebean.jodaLocalTimeMode",
+      "type": "java.lang.String",
+      "description": "The mode to use for Joda LocalTime support 'normal' or 'utc'.",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.lazyLoadBatchSize",
+      "type": "java.lang.Number",
+      "description": "The default batch size for lazy loading.",
+      "defaultValue": 10
+    },
+    {
+      "name": "ebean.queryBatchSize",
+      "type": "java.lang.Number",
+      "description": "The default batch size for 'query joins'.",
+      "defaultValue": 100
+    },
+    {
+      "name": "ebean.jsonInclude",
+      "type": "java.lang.String",
+      "description": "The JSON include mode used when writing JSON.",
+      "defaultValue": "ALL"
+    },
+    {
+      "name": "ebean.jsonDateTime",
+      "type": "java.lang.String",
+      "description": "The format used for DateTime types.",
+      "defaultValue": "MILLIS"
+    },
+    {
+      "name": "ebean.migration.run",
+      "type": "java.lang.Boolean",
+      "description": "Whether to run migration..",
+      "defaultValue": false
+    },
+    {
+      "name": "ebean.migration.migrationPath",
+      "type": "java.lang.String",
+      "description": "Resource path for the migration xml and sql.",
+      "defaultValue": "dbmigration"
+    },
+    {
+      "name": "ebean.tenant.mode",
+      "type": "java.lang.String",
+      "description": "The mode to use for multi-tenancy.",
+      "defaultValue": "NONE"
+    },
+    {
+      "name": "ebean.tenant.currentTenantProvider",
+      "type": "java.lang.String",
+      "description": "The current tenant provider.",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.tenant.catalogProvider",
+      "type": "java.lang.String",
+      "description": "The tenancy catalog provider.",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.tenant.schemaProvider",
+      "type": "java.lang.String",
+      "description": "The tenancy schema provider.",
+      "defaultValue": ""
+    },
+    {
+      "name": "ebean.tenant.partitionColumn",
+      "type": "java.lang.String",
+      "description": "The column name used for TenantMode.PARTITION.",
+      "defaultValue": "tenant_id"
+    }
+  ]
+}
