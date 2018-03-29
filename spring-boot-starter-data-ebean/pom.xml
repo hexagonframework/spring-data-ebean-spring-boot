@@ -20,15 +20,6 @@
             <artifactId>spring-data-ebean</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.ebean</groupId>
-            <artifactId>ebean-agent</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.avaje</groupId>
-            <artifactId>avaje-agentloader</artifactId>
-            <version>2.1.2</version>
-        </dependency>
-        <dependency>
             <groupId>io.github.hexagonframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure-data-ebean</artifactId>
         </dependency>
