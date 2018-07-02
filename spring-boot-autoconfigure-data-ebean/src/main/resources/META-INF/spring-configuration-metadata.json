@@ -89,7 +89,7 @@
         },
         {
           "values": "INSERT",
-          "description": "se JDBC Batch mode on Inserts."
+          "description": "Use JDBC Batch mode on Inserts."
         },
         {
           "values": "ALL",
@@ -110,7 +110,7 @@
         },
         {
           "values": "INSERT",
-          "description": "se JDBC Batch mode on Inserts."
+          "description": "Use JDBC Batch mode on Inserts."
         },
         {
           "values": "ALL",
