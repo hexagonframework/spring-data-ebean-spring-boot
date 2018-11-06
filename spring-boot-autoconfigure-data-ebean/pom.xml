@@ -6,12 +6,10 @@
     <parent>
         <groupId>io.github.hexagonframework.boot</groupId>
         <artifactId>spring-data-ebean-spring-boot</artifactId>
-        <version>1.1.0.RELEASE</version>
+        <version>1.4.0.RELEASE</version>
     </parent>
-    <groupId>io.github.hexagonframework.boot</groupId>
     <artifactId>spring-boot-autoconfigure-data-ebean</artifactId>
-    <version>1.1.0.RELEASE</version>
-    <name>spring boot autoconfigure for spring data ebean</name>
+    <name>spring-boot-autoconfigure-data-ebean</name>
     <description>Autoconfigure for using Spring Data Ebean</description>
 
     <dependencies>
@@ -23,16 +21,6 @@
         <dependency>
             <groupId>io.github.hexagonframework.data</groupId>
             <artifactId>spring-data-ebean</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>io.ebean</groupId>
-            <artifactId>ebean-agent</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.avaje</groupId>
-            <artifactId>avaje-agentloader</artifactId>
             <optional>true</optional>
         </dependency>
     </dependencies>

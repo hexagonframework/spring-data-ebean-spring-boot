@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.hexagonframework.boot</groupId>
     <artifactId>spring-data-ebean-spring-boot</artifactId>
-    <version>1.1.0.RELEASE</version>
-    <name>Spring data ebean for spring boot</name>
+    <version>1.4.0.RELEASE</version>
+    <name>spring-data-ebean-spring-boot</name>
     <description>Spring boot support for spring data ebean</description>
     <packaging>pom</packaging>
 
@@ -45,9 +45,8 @@
     </modules>
 
     <properties>
-        <spring-boot.version>1.5.10.RELEASE</spring-boot.version>
-        <spring-data-ebean.version>1.2.7.RELEASE</spring-data-ebean.version>
-        <ebean-agent.version>11.10.1</ebean-agent.version>
+        <spring-boot.version>2.0.0.RELEASE</spring-boot.version>
+        <spring-data-ebean.version>1.4.0.RELEASE</spring-data-ebean.version>
     </properties>
 
     <profiles>
@@ -126,22 +125,12 @@
             <dependency>
                 <groupId>io.github.hexagonframework.boot</groupId>
                 <artifactId>spring-boot-autoconfigure-data-ebean</artifactId>
-                <version>1.1.0.RELEASE</version>
+                <version>${version}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.hexagonframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-ebean</artifactId>
-                <version>1.1.0.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>io.ebean</groupId>
-                <artifactId>ebean-agent</artifactId>
-                <version>${ebean-agent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.avaje</groupId>
-                <artifactId>avaje-agentloader</artifactId>
-                <version>2.1.2</version>
+                <version>${version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
