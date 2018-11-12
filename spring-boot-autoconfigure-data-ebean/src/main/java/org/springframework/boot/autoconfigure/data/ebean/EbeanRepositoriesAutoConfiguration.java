@@ -71,7 +71,8 @@ public class EbeanRepositoriesAutoConfiguration {
 
   @SuppressWarnings("SpringJavaAutowiringInspection")
   @Bean
-  public ServerConfig defaultEbeanServerConfig(DataSource dataSource, CurrentUserProvider currentUserProvider) {
+  @ConditionalOnMissingBean
+  public ServerConfig serverConfig(DataSource dataSource, CurrentUserProvider currentUserProvider) {
     ServerConfig config = new ServerConfig();
 
     config.setDataSource(dataSource);
@@ -89,8 +90,9 @@ public class EbeanRepositoriesAutoConfiguration {
   }
 
   @Bean
-  public EbeanServer defaultEbeanServer(ServerConfig defaultEbeanServerConfig) {
-    return EbeanServerFactory.create(defaultEbeanServerConfig);
+  @ConditionalOnMissingBean
+  public EbeanServer ebeanServer(ServerConfig serverConfig) {
+    return EbeanServerFactory.create(serverConfig);
   }
 
   @Bean
